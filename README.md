@@ -4,7 +4,7 @@ An editorial shopping desk built by Janvi Singh: ink-and-saffron design, receipt
 
 ## Stack
 
-React + Vite, Express for local development, a Vercel serverless API, and Groq-hosted Llama (`llama-3.3-70b-versatile`). No OpenAI key or SDK is required. Calls use built-in `fetch`.
+React + Vite, Express for local development, a Vercel serverless API, and Groq-hosted openai/gpt-oss-120b. No OpenAI key or SDK is required. Calls use built-in `fetch`.
 
 ## Start on Windows (PowerShell)
 
@@ -49,7 +49,7 @@ Replace the source files with this version, run `npm install` and update `.env` 
 | Name | Value |
 | --- | --- |
 | `GROQ_API_KEY` | Your private Groq key |
-| `GROQ_MODEL` | `llama-3.3-70b-versatile` |
+| `GROQ_MODEL` | `openai/gpt-oss-120b` |
 
 5. Deploy, open the generated `.vercel.app` URL, and test a real recommendation.
 6. Submit that URL. If you change environment variables later, redeploy.
@@ -67,7 +67,7 @@ npx vercel --prod
 
 ## Request flow
 
-React posts user preferences to `/api/recommend`. The server sends those preferences and the INR catalog to Groq. Llama responds in JSON with a summary, product IDs and reasons. The backend validates the response shape and removes unknown and duplicate IDs. React maps the IDs to the original catalog and displays only the selected products.
+React posts user preferences to `/api/recommend`. The server sends those preferences and the INR catalog to Groq. responds in JSON with a summary, product IDs and reasons. The backend validates the response shape and removes unknown and duplicate IDs. React maps the IDs to the original catalog and displays only the selected products.
 
 The model is instructed to interpret `25k` as ₹25,000 and `1 lakh` as ₹1,00,000. Prices are fictional INR demo prices, not converted live prices. Price/category interpretation is performed by the model and still needs live evaluation; JSON mode guarantees JSON syntax, not semantic correctness.
 

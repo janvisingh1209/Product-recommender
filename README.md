@@ -21,7 +21,8 @@ Copy-Item .env.example .env
 
 ```env
 GROQ_API_KEY=your_actual_groq_key
-GROQ_MODEL=llama-3.3-70b-versatile
+GROQ_MODEL=openai/gpt-oss-120b
+
 ```
 
 5. Start both the frontend and API with one command:

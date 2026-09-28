@@ -1,0 +1,139 @@
+.device {
+  position: relative;
+  transform: rotate(-12deg);
+  filter: drop-shadow(10px 15px 9px #28332625);
+}
+.phone {
+  width: 76px;
+  height: 143px;
+  border: 5px solid #484951;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #9999bb, #dbd9ec 48%, #838eac);
+}
+.phone:before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 7px;
+  top: 3px;
+  left: 19px;
+  border-radius: 8px;
+  background: #484951;
+}
+.phone:after {
+  content: "";
+  position: absolute;
+  inset: 40px 10px 12px;
+  border: 1px solid #ffffff60;
+  border-radius: 50% 50% 18px 18px;
+  background: linear-gradient(30deg, #fff4, transparent);
+}
+.peach .phone {
+  background: linear-gradient(135deg, #c79578, #f0d6b4, #ba9d80);
+}
+.blue .phone {
+  background: linear-gradient(135deg, #496077, #a1c0d5, #607e95);
+}
+.headphones {
+  height: 115px;
+  width: 107px;
+  border: 13px solid #586957;
+  border-bottom: 0;
+  border-radius: 65px 65px 15px 15px;
+}
+.headphones:before,
+.headphones:after {
+  content: "";
+  position: absolute;
+  top: 48px;
+  width: 30px;
+  height: 66px;
+  border-radius: 13px;
+  background: #3f503e;
+  border: 4px solid #788574;
+}
+.headphones:before {
+  left: -22px;
+}
+.headphones:after {
+  right: -22px;
+}
+.lavender .headphones {
+  border-color: #747184;
+}
+.lavender .headphones:before,
+.lavender .headphones:after {
+  background: #535063;
+  border-color: #9995a9;
+}
+.laptop {
+  width: 156px;
+  height: 100px;
+  background: linear-gradient(145deg, #758a9a, #c5d6d5 50%, #617d81);
+  border: 6px solid #465558;
+  border-bottom-width: 10px;
+  border-radius: 6px;
+  transform: rotate(-8deg);
+}
+.laptop:after {
+  content: "";
+  position: absolute;
+  bottom: -22px;
+  left: -17px;
+  width: 178px;
+  height: 13px;
+  background: #a0aaaa;
+  clip-path: polygon(7% 0, 93% 0, 100% 80%, 96% 100%, 4% 100%, 0 80%);
+}
+.watch {
+  height: 151px;
+  width: 43px;
+  background: #768570;
+  border-radius: 15px;
+}
+.watch:before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: -12px;
+  width: 65px;
+  height: 74px;
+  background: #283d34;
+  border: 5px solid #a3ada0;
+  border-radius: 20px;
+}
+.watch:after {
+  content: "10:09";
+  position: absolute;
+  top: 66px;
+  left: -4px;
+  color: #dae4bb;
+  font: 600 19px monospace;
+}
+.buds {
+  width: 113px;
+  height: 70px;
+  border-radius: 25px;
+  background: linear-gradient(#fdfcfa, #d8d3ca);
+  transform: rotate(-10deg);
+  border: 1px solid #bcb8b2;
+}
+.buds:before,
+.buds:after {
+  content: "";
+  position: absolute;
+  top: -32px;
+  width: 21px;
+  height: 53px;
+  border-radius: 15px;
+  background: #faf9f7;
+  border: 1px solid #d5d2cc;
+}
+.buds:before {
+  left: 18px;
+  transform: rotate(-20deg);
+}
+.buds:after {
+  right: 18px;
+  transform: rotate(20deg);
+}
